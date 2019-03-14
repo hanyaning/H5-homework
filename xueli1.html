@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+       div{
+           background-color:white;
+           width:500px;
+           height:500px;
+           /* margin: 0 auto; */
+           box-shadow: 2px 2px 10px gray;
+       }
+       h1{
+           padding-left: 30px;
+           padding-top: 20px;
+       }
+       .box{
+           padding-top: 10px;
+           margin-left: 30px;
+           width:400px;
+           height: 120px;
+       }
+       .box1{
+           margin-top:50px;
+           margin-left: 30px;
+           width:400px;
+           height: 100px; 
+       }
+       input{
+          border-color:gainsboro;
+          margin-top: 3px;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>毕业生信息</h1>
+        <fieldset class="box">
+            <legend style="color:red ">
+                学生信息
+            </legend>
+            <form id="meta" method="GET"  action="">
+                姓名 <input type="text" name="name1" placeholder="请输入姓名" required autofocus="autofocus">
+                <span style="color:red;padding-left:2px">*</span>
+                <br>
+                学号 <input type="number" name="name2" placeholder="请输入学号" required>
+                <span style="color:red;padding-left:2px">*</span>
+                <br>
+                手机 <input type="tel name="name3 placeholder="请输入手机号" required>
+                <span style="color:red;padding-left:2px">*</span>
+                <br>
+                邮箱 <input type="email" name="name4" placeholder="请输入邮箱地址" required>
+                <span style="color:red;padding-left:2px">*</span>
+                <br>
+            </form>
+        </fieldset>
+        <fieldset class="box1">
+            <legend style="color:red">
+                录取信息
+            </legend>
+            <form action=""method="GET" >
+                录取学校 <input type="search" name="name5" list="school" form="meta">
+                <datalist id="school">
+                    <option>河北师范大学</option>
+                    <option>河北工业大学</option>
+                    <option>河北科技大学</option>
+                    <option>北京大学</option>
+                    <option>清华大学</option>
+                    <option>南开大学</option>
+                </datalist>
+                <br>
+                入学成绩 <input type="number" name="name6" form="meta">
+                <br>
+                入学时间 <input type="date" name="name7" form=""meta>
+            </form>
+        </fieldset>
+        <input style="margin-left:30px;margin-top:30px;color:whitesmoke"type="submit" form="meta" value="提交">
+    </div>
+</body>
+</html>
