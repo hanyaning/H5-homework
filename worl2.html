@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .box{
+            width: 500px;
+            height: 300px;
+            /* background-color: aqua; */
+            border:2px solid gray;
+        }
+        .inp{
+            width:300px;
+            height:50px;
+            margin-top:20px;
+            margin-left:15px;
+            border: 3px solid orange;
+        }
+        .but{
+            width:100px;
+            height:48px;
+            margin-left: 10px;
+            font-size: 20px;
+            color: gray;
+        }
+        #box2{
+            width:500px;
+            height:230px;
+        }
+        p{
+            margin-left: 12px;
+            margin-top: 3px;
+        }
+        #box3{
+            width:500px;
+            height:150px;
+            /* float: left; */
+            /* background-color: aquamarine; */
+        }
+        #but1{
+            width:30px;
+            height: 30px;
+            color: cadetblue;
+            margin-left: 450px; 
+            font-size: 20px;
+        }
+        ul li{
+            display:inline-block;
+            float: left;
+            text-align: center;
+            margin-left:11px;
+            margin-top: 3px;
+            width:100px;
+            height:30px;
+            background-color:lightslategrey;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input class="inp" id="inp" type="search" name="search" value="请输入想查找的商品" >
+        <button class="but" onclick="savemessage('inp')">搜索</button>
+        <div id="box2">
+           <p>最近搜索</p>
+           <div id ="box3">
+                <ul id="ull">
+                </ul>
+           </div>
+           <button id = "but1" onclick="claer(but1)">X</button>
+        </div>
+    </div>
+</body>
+<script>
+    var arr = new Array();  //时间数组
+    var arr1 = new Array();  //内容数组
+    function savemessage(id){
+        var time = new Date();
+        var time1 = time.getMinutes();
+        var time2 = time.getHours();
+        var time4 = time.getSeconds();
+        var time3 = time2 +":"+time1+":"+time4;
+        arr.push(time3);
+        var message = document.getElementById(id).value;
+        arr1.push(message);
+        savemessage1(arr,arr1); 
+        console.log(arr1);
+        
+    }
+    function savemessage1(arr,arr1){
+        for(var i=0;i<arr.length;i++){
+            localStorage.setItem(arr[i],arr1[i]);
+        }
+        var blank = document.getElementById('ull');
+        if(localStorage.length > 1){
+            var m=0;
+            var i=0;
+            for(i;i<localStorage.length-1;i++){
+                var key1 = localStorage.key(i);
+                var value2 = localStorage.getItem(key1);
+                console.log(value2);
+                if(arr1[localStorage.length-1] != value2){
+                    m++;
+                }
+            }
+            if(m == localStorage.length-1){
+                console.log(m);
+                var li = document.createElement('li');
+                blank.appendChild(li);
+                var key = localStorage.key(localStorage.length-1);
+                var value = localStorage.getItem(key);
+                li.innerHTML += value;
+            }
+        }else{
+            var li1 = document.createElement('li');
+            blank.appendChild(li1);
+            var key0 = localStorage.key(0);
+            var value1 = localStorage.getItem(key0);
+            li1.innerHTML += value1;
+            console.log("2");
+        }
+
+    }
+    function claer(id){
+        localStorage.clear();
+        document.getElementById('ull').style.display = 'none';
+    }
+</script>
+</html>
