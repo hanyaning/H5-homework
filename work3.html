@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+        }
+        canvas{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <canvas id = 'canvas' width="300" height="200"></canvas>
+    <canvas id = 'canvas1' width="300" height="200"></canvas>
+    </div>
+    <script>
+            window.onload = function(){
+                var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext('2d');
+                var canvas_text = document.getElementById("canvas");
+                var context1 = canvas_text.getContext('2d');
+                var isdown = false;
+                //绘制在外层灰色朦罩
+                function drawRect(_con){
+                    _con.fillStyle = 'lightgray';
+                    _con.beginPath();
+                    _con.fillRect(0,0,300,200);
+                    _con.closePath();
+                }
+                drawRect(context);
+                //绘制刮奖时的文字效果
+                function drawText(text){
+                    var textgroup = ['谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','一等奖','谢谢惠顾','谢谢惠顾','谢谢惠顾','一等奖',
+                    '谢谢惠顾','谢谢惠顾','三等奖','谢谢惠顾','谢谢惠顾','谢谢惠顾','二等奖','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','二等奖','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','三等奖','谢谢惠顾','谢谢惠顾','谢谢惠顾','谢谢惠顾','三等奖','谢谢惠顾',
+                    '谢谢惠顾','谢谢惠顾','谢谢惠顾','三等奖','谢谢惠顾','谢谢惠顾','谢谢惠顾'];
+                    text.font = "bold 40px 宋体";
+                    text.fillStyle = 'red';
+                    text.textAlign='center';
+                    text.fillText(textgroup[parseInt(Math.random()*50)],150,100);
+                }
+                drawText(context1);
+                //globalCompositeOperation属性的应用
+                context.globalCompositeOperation = 'destination-out';
+                //绘制源图像
+                function image(_con,ev){
+                    var x = ev.clientX;
+                    var y = ev.clientY;
+                    _con.fillStyle = 'white';
+                    _con.beginPath();
+                    _con.moveTo(x,y);
+                    _con.arc(x,y,15,0,2*Math.PI,false);
+                    _con.closePath();
+                    _con.fill();
+                }
+                //判断是否按下鼠标
+                function isDown(ev){
+                    ev.preventDefault();
+                    isdown = true;
+                }
+                //判断是否抬起鼠标
+                function isup(ev){
+                    isdown = false;
+                }
+                //判断鼠标是不是开始移动
+                function ismove(ev){
+                  ev.preventDefault();
+                  if(isdown){
+                      image(context,ev);
+                      judge(context);
+                  }
+                }
+                //给canvas加事件监听
+                canvas.addEventListener('mousemove',ismove);
+                canvas.addEventListener('mousedown',isDown);
+                canvas.addEventListener('mouseup',isup);
+                //判断是不是达到85%
+                function judge(_con){
+                    var imgdata = _con.getImageData(0,0,300,200);
+                    var dataMessage = imgdata.data;
+                    var newImageData = [];
+                    for(var i = 0;i<dataMessage.length;i+=4){
+                        if(dataMessage[i+3]<128){
+                            newImageData.push(dataMessage[i+3]);
+                        }
+                    }
+                    //console.log((newImageData.length/(dataMessage.length/4)*100).toFixed(2));
+                    if((newImageData.length/(dataMessage.length/4)*100).toFixed(2)>85){
+                        _con.clearRect(0,0,300,200);
+                    }
+                }
+            }
+        </script>
+</body>
+</html>
