@@ -1,0 +1,262 @@
+*{padding: 0;margin: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+.box{width: 100%;background-color: #e1e1e1;}
+#nav-boxss{z-index: 100;width: 100%;}
+#nav-boxs{width: 100%;height:45px;background-color: black;z-index: 100;}
+#nav-box1{height: 45px;line-height: 45px}
+.col-md-2 a{color: white;}
+/* 响应式导航栏 */
+.nav-box2{width: 100%;height: 60px;z-index:100;}
+.nav-box2 nav{height: 60px;line-height: 60px;background: #e1e1e1;;border-radius: 0;border: none;z-index: 99;}
+.nav-box2 .navbar-branda{padding-right: 40px;}
+.nav-box2 #col-1{z-index: 99;background-color:#e1e1e1;}
+.nav-box2 #col-1 li{height: 60px;padding-left: 35px;}
+.nav-box2 #col-1 li a:hover{border-bottom: 2px solid orange;}
+.nav-box2 #col-1 li a{font-weight: bold;font-size: 16px;height: 60px;line-height: 35px;}
+/* 轮播图 */
+#generic{width: 100%;height: 450px;}
+/* 轮播内容 */
+.carousel-inner .item img{width: 100%;height: 446px;}
+.carousel-caption{position: relative}
+.carousel-caption h1{position: absolute;top: -370px;left:-50px;}
+.carousel-caption .carousel-p{position:absolute;left:-70px;top:-290px;margin-top: 10px;border-bottom: 1px solid #656465;border-top: 1px solid #656465;}
+.carousel-caption .carousel-p p{margin-top: 10px;}
+.carousel-caption .carousel-p .carousel-smallp{margin-left: 20px;}
+/* <!-- 轮播中的input框 --> */
+#generic form{position: absolute;left:400px;top:330px;}
+.form-group{border:2px solid black; border-radius: 6px}
+.form-group input{height:40px;float: left;}
+.carousel-input{border-top-left-radius:6px;border-bottom-left-radius:6px;border:none;width:120px;background: url(img/position.png) no-repeat 10px 5px;background-color:#d3d3d8;padding-left: 15px;}
+.carousel-text{width: 270px;background-color: #e1e1e1;border-left: none;padding-top:2px;border: none;}
+.carousel-input3{border-top-right-radius:6px;border-bottom-right-radius:6px;width: 120px;background: url(img/search.png) no-repeat 45px 5px;background-color:orange;border: none;}
+/* 机场接送 */
+.airport{height: 300px;margin-top:20px;position: relative;}
+.smalldiv{height: 300px;width:250px;position:absolute;background-color:#16387f;left: 0;top:0;margin-left: 900px;}
+.smalldiv img{margin-top: 50px;margin-left: 80px;}
+.smalldiv p{font-size: 20px;color: white;margin-left: 83px;margin-top:10px;}
+.smalldiv input{width: 100px;height: 40px;margin-left:75px;margin-top:10px;background-color:#16387f;border: 1px solid white;border-radius: 5px;font-size: 16px;color: white; }
+#carousel-div{height: 300px;width:900px;}
+#carousel-div img{width:900px;height: 300px;}
+.smallcarousel{position: relative;}
+.smallcarousel h1{position: absolute;top:-260px;left:300px;}
+.smallcarousel-p{position: absolute;top:-190px;left:220px;}
+.smallp{padding-left: 87px;}
+/* 热门路线 */
+.title-div{text-align: center;}
+.photoList img{width:100%;border-right: 2px solid white;border-bottom: 2px solid white;}
+.left-imgGroup{padding-right: 0px;}
+.right-imgGroup{padding-left: 0px;}
+.right-imgGroup .photoList img{width: 100%;border-bottom: 1px solid white;height: 259.33px;}
+.photoList{position: relative;}
+.black-box1{position: absolute;background-color: black;color: white;left: 0;top:287px;width: 100%;border-right:2px solid white;border-bottom: 2px solid white;}
+.black-box1 p{padding-left:30px;font-size: 20px;}
+.black-box1 .p1{font-size: 18px;}
+.black-box2{position: absolute;background-color: black;color: white;left: 0;top:337px;width: 100%;border-right:2px solid white;border-bottom: 2px solid white;}
+.black-box2 p{padding-left:30px;font-size: 20px;}
+.black-box2 .p1{font-size: 18px;}
+.black-box3{position: absolute;background-color: black;color: white;left: 0;top:183px;width: 100%;border-right:2px solid white;border-bottom: 2px solid white;opacity: 0.8}
+.black-box3 p{padding-left:30px;font-size: 20px;}
+.black-box3 .p1{font-size: 18px;}
+/* 签证路线 */
+.poster-title h1{text-align: center;}
+.poster-title p{text-align: center;}
+.left-photo{padding-right: 0px;}
+.middle-photo{padding-left: 0px; padding-right: 0px;}
+.poster-imgList img{width:100%;border-right:1px solid white;border-bottom: 1px solid white;}
+.middle-photo img{height: 254px;}
+.right-photo{padding-left: 0px;}
+.right-smallPhoto img{height: 254px;}
+.left-smallPhoto{position: relative;}
+.middle-smallPhoto{position: relative;}
+.right-smallPhoto{position: relative;}
+.poster-blackBox{background-color:black;width: 100%;border: 1px solid white;position: absolute;top:472px;left: 0;color: white;opacity: 0.7;}
+.poster-blackBox p{font-size: 16px;padding-left: 30px;}
+.poster-blackBox span{font-size: 16px;padding-left: 30px;}
+.poster-blackBox2{background-color:black;width: 100%;border: 1px solid white;position: absolute;top:218px;left: 0;color: white;opacity: 0.7;}
+.poster-blackBox2 p{font-size: 16px;padding-left: 30px;}
+.poster-blackBox2 span{font-size: 16px;padding-left: 30px;}
+.poster-input input{margin-bottom:100px;margin-left:150px;margin-top:50px;border:1px solid black;border-radius: 5px;width: 120px;height: 40px;}
+/* 中间图片 */
+.bigBanner img{width: 100%;}
+/* 使命与愿望 */
+.hope-div{background:url(img/back.png) no-repeat;}
+.hopeDiv-title h1{margin-top:60px;text-align: center}
+.hopeDiv-title p{text-align:center; padding-top:10px;margin-bottom:30px;}
+.hope-rightTop{background-color: #1c4f7e;opacity: 0.8;}
+.hopeDiv-leftTop{padding: 0px;}
+.hopeDiv-leftTop img{width:100%;height: 350px;}
+.hope-rightTop{height: 350px;}
+.hope-rightTop h3{text-align: center;color: white;margin-top: 100px;}
+.hope-rightTop p{color: white;margin-left:170px;}
+.hope-rightTop .p1{margin-top: 50px;}
+.hope-rightTop .p4{margin-bottom: 60px;}
+.secondImg{padding-right: 0;padding-left: 0;}
+.secondImg img{width:100%;}
+.thirdDiv{background-color: #16387f;height: 400px;}
+.thirdDiv .col-md-4{background: url(img/rorate.png) no-repeat;position: relative;height: 400px;padding: 0;background-position: 100px 40px;}
+.smallDiv-left img{position: absolute;top:95px;left: 160px;}
+.smallDiv-middle img{position: absolute;top: 91px;left: 168px;}
+.smallDiv-right img{position: absolute;top: 92px;left: 168px;}
+.thirdDiv .col-md-4 h4{color: white;margin-left: 155px;margin-top: 160px;}
+.thirdDiv .col-md-4 .p1{color: white;margin-left:70px;margin-top:100px;}
+.thirdDiv .col-md-4 .p2{color: white;margin-left: 110px;margin-top: 10px;}
+.thirdDiv .col-md-4 .p3{color: white;margin-left:170px;margin-top:100px; }
+.thirdDiv .col-md-4 .p4{color: white;margin-left: 120px;margin-top:10px; }
+.thirdDiv .col-md-4 .p5{color: white;margin-left: 152px;margin-top: 100px;}
+.thirdDiv .col-md-4 .p6{color: white;margin-left: 108px;margin-top: 10px;}
+/* 隐藏的第三个框 */
+.thirdDiv2{display: none;height: 500px;}
+.thirdDiv2 .secondDiv{border-bottom: 1px solid gainsboro;}
+.thirdDiv2 .row .col-xs-12 h3{text-align: center;padding-bottom: 30px;padding-top: 30px;}
+.thirdDiv2 .secondDiv .col-xs-2{padding: 0%;}
+.thirdDiv2 .secondDiv .col-xs-2 img{margin-left: 50px;margin-top: 7px;}
+.thirdDiv2 .secondDiv .col-xs-2 .img1{margin-top: 30px;margin-bottom: 20px;}
+.thirdDiv2 .secondDiv .col-xs-10{padding: 0%;}
+.thirdDiv2 .secondDiv .col-xs-10 p{margin-left: 100px;}
+.thirdDiv2 .secondDiv .col-xs-10 .p1{margin-top: 35px;}
+.thirdDiv2 .secondDiv .col-xs-10 .p2{margin-bottom: 30px;}
+/* 底部大框 */
+.bottom-banner{width: 100%;background-color: black;border-bottom: 1px solid gray;height: 400px;}
+.bottom-banner2{width: 100%;height: 100px;background-color: black;}
+.bottom-div{padding: 0%;}
+.bottom-div p{color: white;margin-top: 40px;margin-left: 5px;font-size: 16px;}
+.bottom-div2{padding: 0%;}
+.bottom-div2 ul li{float: left;background-color: white;margin-top: 30px;}
+.type-li{margin-left: 10px;}
+.bottom-div3 .col-md-10{margin-top: 15px;}
+.type-li2{float: left;color: white;margin-left: 30px;}
+.type-li1{margin-left: 60px;float: left;color: white;}
+.bottom-div4{padding: 0%;}
+.bottom-div4 ul li{color:white;float:left; margin-left:5px;margin-top: 20px;}
+.bottom-div5 ul li{float: left;color: white;margin-top: 30px;margin-left: 5px;}
+.bottom-div6{padding: 0%;}
+.bottom-div6 ul li{float: left;color: white;margin-top: 20px;margin-left: 5px;}
+.bottom-banner2 .container p{text-align: center;color: white;padding-top: 40px;}
+/* 底部隐藏框 */
+.bottom-banner3{width: 100%;height: 200px;background-color: black;}
+.bottom-banner3 p{text-align: center;color: white;}
+.bottom-banner3 .p1{padding-top: 45px;}
+/* <!-- 隐藏的服务理念 --> */
+.hideHope-rightTop{display: none;background-color: white;}
+.hideHope-rightTop h3{text-align: center;margin-left: 25px;margin-top: 30px;margin-bottom: 30px;}
+.hideHope-rightTop p{margin-left:15px;font-size: 14px;margin-bottom: 30px;}
+/* 隐藏的愿望标题 */
+.hideHopeDiv-title{display: none;border-bottom: 1px solid #e8e8e8;margin-top: 30px;margin-bottom: 30px;}
+.hideHopeDiv-title .p1{margin-bottom:30px;font-weight:bolder;color:#e8420a;margin-left: 33px;}
+.hideHopeDiv-title .p2{font-size: 20px;margin-bottom:30px;}
+/* 隐藏的签证推荐 */
+.hidePoster-imgList{display: none;}
+.hideLeft-photo img{width:50%;float: left;}
+.hideRight-photo .hideRight img{width: 50%;float: left;height: 104px;padding-left: 20px;}
+.hideRight2 img{margin-top:13px;width: 50%;float: left;height: 104px;padding-left: 20px;}
+.hideLeft-photo{position: relative;}
+.hideLeft-photo .poster-blackBox{width:157.67px;height:45px;position: absolute;background-color: black;opacity: 0.8;top: 180px;left: 0;}
+.hideLeft-photo .poster-blackBox p{color: white;}
+.hideRight{position: relative;}
+.hideRight2{position: relative;}
+.hideRight .poster-blackBox2{width:140px;height:40px;position: absolute;background-color: black;opacity: 0.8;top: 64px;left: 178px;}
+.hideRight2 .poster-blackBox2{width:140px;height:40px;position: absolute;background-color: black;opacity: 0.8;top: 181px;left: 178px;}
+/* 隐藏标题 */
+
+#hidePoster-title{height:50px;width:100%;display: none;padding-left: 10px;}
+#iconId1{color: red;font-size: 20px;padding-right: 10px;}
+#spanDivId1{font-size: 20px;padding-right: 10px;}
+/* 隐藏热门路线 */
+#hideRoute-imgGroup{display: none;}
+#iconId2{color: red;font-size: 20px;padding-right: 10px;}
+#spanDivId2{font-size: 20px;padding-right: 10px;}
+#phoId{display: none;}
+#hideRoute-imgGroup img{width: 100%;height: 405px;margin-top: 10px;}
+#small-box{background: black;width: 100%;height: 50px;position: absolute;left: 0;bottom: 0;opacity: 0.8;}
+#small-box1{background: black;width: 100%;height: 50px;position: absolute;left: 0;bottom: 0;opacity: 0.8;}
+#Top-img{position: relative;width: 100%;}
+#bottom-img{position: relative;width: 100%;}
+#small-box h5{float:left;margin: 0;margin-left: 20px;margin-top: 18px;color: white;}
+#small-box1 h6{font-size: 10px;float:left;margin: 0;margin-left: 20px;margin-top: 20px;color: white;}
+#small-box1 h5{float:left;margin: 0;margin-left: 20px;margin-top: 18px;color: white;}
+#small-box h6{font-size: 10px;float:left;margin: 0;margin-left: 20px;margin-top: 20px;color: white;}
+/* 按钮 */
+.hideInput-button{display: none;}
+.hideInput-button input{background-color: white;width: 120px;height: 40px;margin-top: 50px;margin-left: 120px;border-radius: 5px;}
+/* 机场接送 */
+#smallSlideImgDiv{height: 150px;background: white;display: none;}
+#rightDivId{display: none;}
+#generic1{display: none;}
+#middle_div{height: 150px;width: 100%;}
+#middle_div div{float: left;padding-top: 20px;}
+#middle_div{display: block;}
+#firstImg{height: 195px;width: 30%; margin-top: 100px; }
+#secondD{height: 195px;width: 50%;}
+#right_div{height: 195px;}
+#inner{height: 175px;width: 170px;}
+#inner h4{color:#1c5080;padding-bottom: 10px;margin-top: 80px;}
+#right_div input{border: 1px solid gray;background: white;color:gray;margin-top: 45px;height:30px;border-radius: 5px;margin-top: 120px;margin-left: 5px;}
+/* 响应式导航 */
+#inp{display: none;}
+#header{position: relative;}
+#inp{position: absolute;top: 0;left: -120px;width: 120px;height: 40px;background-color: #e8420a;color: white;}
+/* 隐藏input */
+#generic{position: relative;}
+#hideInp{display: none;position: absolute;height: 30px;top: 350px;left:50px;}
+#hideInp input{float: left;}
+#but1{border-top-left-radius:6px;border-bottom-left-radius:6px;border:none;height:30px;width:60px;background: url(img/position.png) no-repeat ;background-color:#d3d3d8;}
+#but2{background-color: #e1e1e1;border-left: none;padding-top:2px;border: none;height: 30px;}
+#but3{border-top-right-radius:6px;border-bottom-right-radius:6px;width:60px;height:30px;background: url(img/search.png) no-repeat 13px 0px;background-color:orange;border: none;}
+/* 媒体查询 */
+.bottom-banner3{display: none;}
+ /* 底部隐藏 */
+@media only screen and (max-width:670px){
+    .box{width: 100%;height: 100%;background-color: white;}
+    .bottom-banner{display: none;}
+    .bottom-banner2{display: none;}
+    .bottom-banner3{ display: block;}
+    .thirdDiv{ display: none;}
+    .thirdDiv2{display: block;}    
+}
+/* 服务理念 */
+@media only screen and (max-width: 670px){
+    .hideHope-rightTop{display: block;}
+    .hope-rightTop{display: none;}
+    /* .hopeDiv-leftTop img{margin-left: 10px;} */
+    .hopeDiv-title{display: none;}
+    .hideHopeDiv-title{display: block;}
+    .secondImg{padding-right: 15px;padding-left: 15px;}
+    .hopeDiv-leftTop{padding-left: 20px;padding-right: 20px;}
+}
+/* 签证推荐 */
+@media only screen and (max-width:670px){
+    .hidePoster-imgList{display: block;}
+    .poster-imgList{display: none;}
+    .poster-input input{background-color: white;}
+    .poster-title{display: none;}
+    #hidePoster-title{display: block;}
+    .poster{margin-top: 100px;margin-bottom: 30px;}
+    #iconId1{padding-left: 15px;}
+    #hideHopeDiv-title{margin-bottom: 30px;}
+}
+/* 热门路线 */
+@media only screen and (max-width:670px){
+    #hideRoute-imgGroup{display: block;}
+    .route-imgGroup{display: none;}
+    .hideInput-button{display: block;}
+    .title-div{display: none;}
+}
+/* 机场接送 */
+@media only screen and (max-width:670px){
+    #carousel-div{display: none;}
+    #smallSlideImgDiv{display: block;}
+}
+/* 响应式导航 */
+@media only screen and (max-width:670px){
+    #inp{display: block;}
+}
+/* 大轮播图 */
+@media only screen and (max-width:670px){
+    #inp1{display: none;}
+    #hideInp{display: block;}
+}
+/* 顶部 */
+@media only screen and (max-width:670px){
+   #nav-boxs{display: none;}
+}
